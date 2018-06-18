@@ -1,0 +1,38 @@
+{
+  "name": "client-render-react",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "",
+    "test:unit": "",
+    "start": "NODE_ENV=production node ./index.js",
+    "dist": "NODE_ENV=production webpack --config webpack/webpack.prod.js",
+    "start-dev": "NODE_ENV=development nodemon ./index.js",
+    "debug": "nodemon --debug=5005 ./index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "Ferchas",
+  "license": "MIT",
+  "bugs": {
+    "url": ""
+  },
+  "homepage": "./",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "config": "^1.24.0",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.16.3"
+  },
+  "devDependencies": {
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^14.0.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^3.0.2",
+    "eslint-plugin-react": "^7.5.1",
+    "nodemon": "^1.12.5"
+  }
+}
