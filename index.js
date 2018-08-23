@@ -11,7 +11,7 @@ const appHttpPort = config.get('app.port');
 const optionsStatic = {
   dotfiles: 'ignore',
   etag: false,
-  extensions: ['html', 'css', 'js'],
+  extensions: ['html', 'css', 'js', 'map'],
   index: false,
   maxAge: '1d',
   redirect: false,
