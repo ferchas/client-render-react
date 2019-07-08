@@ -5,11 +5,24 @@ const path = require('path');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
-  mode: 'development',
+  mode: 'production',
+  performance: {hints: false},
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, '../public'),
-    filename: '[name].js',
+    filename: '[name].[hash].js',
+  },
+  optimization: {
+    splitChunks: {
+     cacheGroups: {
+      vendor: {
+       test: /node_modules/,
+       chunks: 'initial',
+       name: 'vendor',
+       enforce: true
+      },
+     }
+    } 
   },
   module: {
     rules: [
@@ -21,7 +34,6 @@ module.exports = {
       {
         test: /\.css$/,
         use: [ 
-          'style-loader',
           MiniCssExtractPlugin.loader,
           {
             loader: 'css-loader',
@@ -35,19 +47,10 @@ module.exports = {
       }
     ],
   },
-  node: {
-    fs: 'empty'
-  },
   devtool: false,
   plugins: [
     new HtmlWebpackPlugin({ template: './src/index.html' }),
-    new MiniCssExtractPlugin({ filename: '[name].css' }),
-    new webpack.SourceMapDevToolPlugin({
-      filename: '[name].map',
-      exclude: ['vendor.js'],
-      // append: '\n//# sourceMappingURL=[url]',
-      // publicPath: '/',
-    }),
+    new MiniCssExtractPlugin({ filename: '[name].[hash]css' }),
     new CopyWebpackPlugin([
       {
         from: path.resolve(__dirname, '../images'),

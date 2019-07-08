@@ -1,10 +1,13 @@
 const config = (ctx) => ({
   parser: ctx.parser ? 'sugarss' : false,
   map: ctx.env === 'development' ? ctx.map : false,
-  plugins: {
-    'postcss-import': {},
-    'postcss-preset-env': {},
-  }
+  plugins: [
+    require('postcss-import'),
+    require('postcss-preset-env'),
+    require('postcss-smart-import'),
+    require('precss'),
+    require('autoprefixer')
+  ]
 });
 
 

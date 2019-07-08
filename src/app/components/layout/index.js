@@ -1,14 +1,13 @@
 import React from 'react';
 import Header from './header.js';
-import Footer from './footer.js';
+// import Footer from './footer.js';
 
 const layout = (props) => (
-  <div>
+  <div className="layout_page">
     <Header />
-    <div>
+    <React.Fragment>
       {props.children}
-    </div>
-    <Footer />
+    </React.Fragment>
   </div>
 );
 

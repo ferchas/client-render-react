@@ -1,0 +1,32 @@
+.articles {
+  display: flex;
+  margin: 37px;
+
+  &-image {
+    height: 150px;
+    width: 200px;
+    min-width: 200px;
+    border-radius: 8px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  &-content {
+    margin: 4px 30px;
+
+    h3 {
+      font-size: 26px;
+      margin: 00;
+      cursor: pointer;
+
+      a {
+        text-decoration: none;
+        color: #000;
+        &:hover {
+          color: #a59d9d;
+        }
+      }
+    }
+  }
+}

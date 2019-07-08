@@ -1,0 +1,74 @@
+@import '../fonts/style.css';
+@import '../icons/style.css';
+
+body {
+  margin: 0px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.layout_page {
+  background-color: #EAEAEA;
+  height: 100%;
+  overflow-y: auto;
+}
+
+header {
+  height: 72px;
+  width: 100%;
+  background-color: #FFFFFF;
+  z-index: 9;
+
+  .header_left {
+    padding: 22px 25px;
+    position: relative;
+    float: left;
+    
+    .header_menu {
+      
+      .title {
+        margin: 0;
+        color: #414141;
+        font-size: 24px;
+        font-weight: 600;
+      }
+
+      .sub-title {
+        margin-left: 20px;
+        color: #414141;
+        font-size: 16px;
+        font-weight: 100;
+      }
+
+    }
+
+  }
+
+  .header_right {
+    margin: 22px 25px;
+    position: relative;
+    float: right;
+    
+    .header_user {
+
+      .icon-menu{
+        vertical-align: text-top;
+      }
+
+      .icon-user{
+        vertical-align: text-top;
+        margin: 0 16px;
+      }
+
+      span {
+        font-size: 16px;
+        font-style: Helvetica Neue, Light;
+        margin-right: 5px;
+        margin-left: 5px;
+        cursor: pointer; 
+      }
+
+    }
+
+  }
+  
+}

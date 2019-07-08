@@ -7,11 +7,10 @@ const path = require('path');
 /*
 * Page Router, render html
 */
-router.get('/', (req, res ) => {
+router.get('/*', (req, res ) => {
   const indexFile = path.join(`${__dirname}/../public/index.html`);
-  fs.readFile(indexFile, 'utf8', (errRead, data) => {
+  fs.readFile(indexFile, 'utf8', (errRead, fileContent) => {
     if (errRead) throw errRead;
-    const fileContent = data;
     res.send(fileContent);
   });
 });

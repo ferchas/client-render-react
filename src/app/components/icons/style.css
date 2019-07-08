@@ -1,0 +1,33 @@
+.icon {
+  
+  &-fa{
+    width: 24px ;
+    height:24px;
+  }
+
+  &-menu {
+    width: 16px ;
+    height:16px;
+  }
+
+  &-user {
+    width: 16px ;
+    height:16px;
+  }
+}
+
+.point {
+  vertical-align: super;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: inline-block;
+
+  &.red {
+    background: red;
+  }
+
+  &.yellow {
+    background: yellow;
+  }
+}

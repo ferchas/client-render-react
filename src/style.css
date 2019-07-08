@@ -1,6 +1,1 @@
-@import './components/layout/style.css';
-
-
-.prueba {
- background: rebeccapurple;
-}
+@import './app/components/layout/style.css';

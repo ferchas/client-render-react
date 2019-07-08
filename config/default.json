@@ -9,6 +9,12 @@
       "en"
     ]
   },
+  "api": {
+    "host": "https://newsapi.org",
+    "basePath": "/v2",
+    "apiKey": "defa2d6b40dc4a7aa396f15f24bf21f2",
+    "country": "us"
+  },
   "webpack": {
     "minimize-css": true,
     "uglify-js": true,
