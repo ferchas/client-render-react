@@ -1,5 +1,8 @@
 @import '../fonts/style.css';
 @import '../icons/style.css';
+@import '../../styles/environment.css';
+
+
 
 body {
   margin: 0px;
@@ -13,62 +16,68 @@ body {
 }
 
 header {
-  height: 72px;
   width: 100%;
   background-color: #FFFFFF;
-  z-index: 9;
+  padding: 30px 0px;
+  display: flex;
+  position: fixed;
 
-  .header_left {
-    padding: 22px 25px;
-    position: relative;
-    float: left;
+  .header_title {
+    flex: 2;
+    text-align: center;
+    margin-left: 30px;
+ 
+    .title {
+      margin: 0;
+      color: #414141;
+      font-size: 24px;
+      font-weight: 600;
+    }
+
+    .sub-title {
+      margin-left: 20px;
+      color: #414141;
+      font-size: 16px;
+      font-weight: 100;
+    } 
+  }
     
-    .header_menu {
-      
-      .title {
-        margin: 0;
-        color: #414141;
-        font-size: 24px;
-        font-weight: 600;
-      }
+  .header_user {
+    margin-right: 30px;
 
-      .sub-title {
-        margin-left: 20px;
-        color: #414141;
-        font-size: 16px;
-        font-weight: 100;
-      }
+    .icon-user{
+      vertical-align: text-top;
+      margin: 0 10px;
+    }
 
+    span {
+      font-size: 16px;
+      font-style: Helvetica Neue, Light;
+      margin-right: 5px;
+      margin-left: 5px;
+      cursor: pointer; 
     }
 
   }
 
-  .header_right {
-    margin: 22px 25px;
-    position: relative;
-    float: right;
-    
-    .header_user {
-
-      .icon-menu{
-        vertical-align: text-top;
-      }
-
-      .icon-user{
-        vertical-align: text-top;
-        margin: 0 16px;
-      }
-
-      span {
-        font-size: 16px;
-        font-style: Helvetica Neue, Light;
-        margin-right: 5px;
-        margin-left: 5px;
-        cursor: pointer; 
-      }
-
-    }
-
-  }
   
+  
+}
+
+@media only screen and (min-width: $minScreen) {
+  header {
+    position: unset;
+    
+    .header_title {    
+      text-align: left;
+   
+      .title {
+        font-size: 24px;
+      }
+  
+      .sub-title {
+        font-size: 16px;
+      } 
+    }
+  }
 }

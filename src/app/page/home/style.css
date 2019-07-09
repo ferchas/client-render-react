@@ -1,12 +1,26 @@
+@import '../../styles/environment.css';
+
 .home-page {
-  display: flex;
-  justify-content: center;
+  .menu {
+    width: 44px;
+    height: 44px;
+    z-index: 9;
+    position: absolute;
+    top: 22px;
+    margin-left: 5px;
+  }
   
   nav {
-    margin-right: 25px;
-    width: 15%;
+    padding: 0 10px;
+    background-color: #ccc;
+    z-index: 9;
+    position: fixed;
+    top: $headerTop;
+    height: 100%;
 
     ul {
+      padding: 0;
+
       li {
         cursor: pointer;
         padding: 10px;
@@ -19,8 +33,40 @@
     }
   }
 
+  .close {
+    display: none;
+  }
+
   article {
-    width: 80%;
-    max-width: 1800px;
+    width: 100%;
+    margin-top: 116px;
+  }
+}
+
+@media only screen and (min-width: $minScreen) {
+  .home-page {
+    display: flex;
+    justify-content: center;
+
+    .menu {
+      display: none;
+    }
+
+    nav {
+      background-color: unset;
+      z-index: unset;
+      position: unset;
+      top: unset;
+    }
+
+    .close {
+      display: block;
+    }
+
+    article {
+      width: 80%;
+      max-width: 1800px;
+      margin-top: unset;
+    }
   }
 }

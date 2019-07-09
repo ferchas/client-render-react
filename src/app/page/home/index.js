@@ -14,9 +14,11 @@ class Home extends Component {
     this.state = {
       category: null,
       headlines: null,
+      closeMenu: false,
     };
     
     this.handleFilter = this.handleFilter.bind(this);
+    this.handleMenu = this.handleMenu.bind(this);
   }
 
   componentDidMount() {
@@ -28,11 +30,16 @@ class Home extends Component {
     this.props.history.push(el.target.innerText);
   }
 
+  handleMenu(){
+    this.setState({ closeMenu: !this.state.closeMenu});
+  }
+
   render() {
     return (
       <Layout>
         <div className="home-page">
-          <nav>
+          <img src="./images/menu.png" className="menu" onClick={this.handleMenu}/>
+          <nav className={this.state.closeMenu? '' : 'close'}>
             <ul>
               { 
                 this.state.category && 

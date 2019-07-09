@@ -1,11 +1,13 @@
+@import '../../styles/environment.css';
+
 .articles {
   display: flex;
-  margin: 37px;
+  margin: 8px;
 
   &-image {
-    height: 150px;
-    width: 200px;
-    min-width: 200px;
+    height: 100px;
+    width: 150px;
+    min-width: 150px;
     border-radius: 8px;
     background-repeat: no-repeat;
     background-size: cover;
@@ -13,11 +15,11 @@
   }
 
   &-content {
-    margin: 4px 30px;
+    margin: 2px 15px;
 
     h3 {
-      font-size: 26px;
-      margin: 00;
+      font-size: 16px;
+      margin: 0;
       cursor: pointer;
 
       a {
@@ -26,6 +28,35 @@
         &:hover {
           color: #a59d9d;
         }
+      }
+    }
+
+    p {
+      display: none;
+    }
+  }
+}
+
+@media only screen and (min-width: $minScreen) {
+  .articles {
+    margin: 37px;
+
+    &-image {
+      height: 150px;
+      width: 200px;
+      min-width: 200px;
+    }
+
+    &-content {
+      margin: 4px 30px;
+      width: 72%;
+  
+      h3 {
+        font-size: 26px;
+      }
+      
+      p {
+        display: block;
       }
     }
   }
