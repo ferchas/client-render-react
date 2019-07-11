@@ -12,4 +12,7 @@ module.exports = {
   verbose: true,
   // testPathIgnorePatterns: ['<rootDir>/tests/e2e'],
   testEnvironment: 'node',
+  moduleNameMapper: {
+    "^.+\\.css$": "jest-transform-css"
+  },
 };

@@ -67,6 +67,7 @@
 
     .close {
       display: block;
+      transform: translateX(0%);
     }
 
     article {

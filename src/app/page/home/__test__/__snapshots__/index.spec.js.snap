@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home Page should render 1`] = `
+<div
+  className="layout_page"
+>
+  <header>
+    <div
+      className="header_title"
+    >
+      <span
+        className="title"
+      >
+        TITLE
+      </span>
+      <span
+        className="sub-title"
+      >
+        
+      </span>
+    </div>
+    <div
+      className="header_user"
+    >
+      <img
+        className="icon-fa icon-user"
+        src="./images/user.svg"
+      />
+      <span>
+        Usuario
+      </span>
+    </div>
+  </header>
+  <div
+    className="home-page"
+  >
+    <img
+      className="menu"
+      onClick={[Function]}
+      src="./images/menu.png"
+    />
+    <nav
+      className="close"
+    >
+      <ul />
+    </nav>
+    <article />
+  </div>
+</div>
+`;

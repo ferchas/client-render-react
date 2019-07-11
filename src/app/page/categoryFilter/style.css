@@ -1,14 +1,29 @@
+@import '../../styles/environment.css';
+
 .category-filter-page {
   display: flex;
   justify-content: center;
+  margin-top: $headerTop;
   
   aside {
-    padding: 0 0 0 25px;
     width: 15%;
   }
 
   article {
     width: 80%;
-    max-width: 1800px;
+  }
+}
+
+@media only screen and (min-width: $minScreen) {
+  .category-filter-page {
+    margin-top: unset;
+    
+    aside {
+      padding: 0 0 0 25px;
+    }
+  
+    article {
+      max-width: 1800px;
+    }
   }
 }
