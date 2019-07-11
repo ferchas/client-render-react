@@ -17,6 +17,9 @@
     position: fixed;
     top: $headerTop;
     height: 100%;
+    transition: 0.2s;
+    transition-timing-function: ease-in;
+    transform: translateX(0);
 
     ul {
       padding: 0;
@@ -35,6 +38,9 @@
 
   .close {
     display: none;
+    transform: translateX(-130%);
+    transition-timing-function: ease-out;
+    transition: 0.2s;
   }
 
   article {
